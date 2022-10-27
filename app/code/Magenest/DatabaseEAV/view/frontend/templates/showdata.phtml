@@ -1,0 +1,19 @@
+<?php
+/**
+ * @var $block Magenest\DatabaseEAV\Block\Showdata
+ */
+$isLogin = $block->isCustomerLoggedIn();
+$name = $block->getCustomerName();
+$email = $block->getCustomerEmail();
+?>
+<?php if ($isLogin) { ?>
+    <p><?= __('Login success!'); ?></p>
+<?php } else { ?>
+    <p><?= __('Login fail!'); ?></p>
+<?php } ?>
+
+<p><?= /** @var string $name */
+    __($name); ?></p>
+
+<p><?= /** @var string $email */
+    __($email); ?></p>

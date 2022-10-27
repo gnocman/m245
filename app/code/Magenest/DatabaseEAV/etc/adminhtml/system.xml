@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="Vendor" sortOrder="10">
+            <label>Vendor</label>
+        </tab>
+        <section id="colorpicker" translate="label" type="text" sortOrder="310" showInDefault="1" showInWebsite="0"
+                 showInStore="0">
+            <label>Colorpicker</label>
+            <tab>Vendor</tab>
+            <resource>Magenest_DatabaseEAV::configuration</resource>
+            <group id="colorpickerSetting" translate="label" type="text" sortOrder="1" showInDefault="1"
+                   showInWebsite="0" showInStore="0">
+                <label>ColorPicker Settings</label>
+                <field id="theme_color" translate="label" sortOrder="8" type="text" showInDefault="1" showInWebsite="0"
+                       showInStore="0">
+                    <label>Theme Color</label>
+                    <validate>required-entry</validate>
+                    <frontend_model>Magenest\DatabaseEAV\Block\Colorpicker</frontend_model>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
